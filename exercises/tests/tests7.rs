@@ -32,11 +32,11 @@
 // to pass this exercise.
 //
 // Execute `rustlings hint tests7` or use the `hint` watch subcommand for a
-// hint.
 
-// I AM NOT DONE
 
-fn main() {}
+fn main() {
+    
+}
 
 #[cfg(test)]
 mod tests {
@@ -53,3 +53,4 @@ mod tests {
         assert!(timestamp >= e && timestamp < e + 10);
     }
 }
+//重启vs

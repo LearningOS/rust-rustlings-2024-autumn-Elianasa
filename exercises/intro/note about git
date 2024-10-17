@@ -1,0 +1,19 @@
+拉取代码报错
+
+    fatal: unable to access https://github.com/xxxx/: gnutls_handshake
+
+    () failed: The TLS connection was non-properly terminated.
+
+执行下面命令：
+
+git config --global --unset http.proxy 
+git config --global --unset https.proxy
+
+拉取代码，又报错
+
+    fatal: unable to access https://github.com/xxx/: Failed to connect to github.com port 443: Connection timed out
+
+执行下面命令：
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy

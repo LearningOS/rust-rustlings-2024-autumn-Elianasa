@@ -3,11 +3,30 @@
 	This problem requires you to implement a sorting algorithm
 	you can use bubble sorting, insertion sorting, heap sorting, etc.
 */
-// I AM NOT DONE
 
-fn sort<T>(array: &mut [T]){
-	//TODO
-}
+use std::mem::swap;
+fn bubble_sort<T: Ord>(array: &mut [T]) {  
+    let n = array.len();  
+    for j in (1..=n).rev() {  
+        let mut swapped = false;  
+        for i in 0..(j - 1) {  
+            if array[i] > array[i + 1] {  
+                // swap(&mut array[i], &mut array[i + 1]);  
+                array.swap(i + 1, i); 
+                swapped = true;  
+            }  
+        }  
+        // 如果在一轮中没有发生交换，说明数组已经有序，可以提前退出  
+        if !swapped {  
+            break;  
+        }  
+    }  
+}  
+  
+// 对外提供的排序接口  
+fn sort<T: Ord>(array: &mut [T]) {  
+    bubble_sort(array);  
+}  
 #[cfg(test)]
 mod tests {
     use super::*;

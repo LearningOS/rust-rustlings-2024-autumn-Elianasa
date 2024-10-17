@@ -9,7 +9,7 @@
 // section of your documentation comment on the item.
 //
 // When `unsafe` is marked on a code block enclosed by curly braces,
-// it declares an observance of some contract, such as the validity of some
+// it declares an observance of some  contract, such as the validity of some
 // pointer parameter, the ownership of some memory address. However, like
 // the text above, you still need to state how the contract is observed in
 // the comment on the code block.
@@ -20,9 +20,6 @@
 // your own code, take a step back and use safe code instead!
 //
 // Execute `rustlings hint tests5` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
 
 /// # Safety
 ///
@@ -32,7 +29,8 @@ unsafe fn modify_by_address(address: usize) {
     // code's behavior and the contract of this function. You may use the
     // comment of the test below as your format reference.
     unsafe {
-        todo!("Your code goes here")
+        let address = address as *mut u32;
+        *address = 0xAABBCCDD;
     }
 }
 
